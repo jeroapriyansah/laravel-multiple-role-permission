@@ -14,5 +14,7 @@ class RoleUserSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\User::findOrFail(1)->roles()->sync(1);
+        \App\Models\User::findOrFail(2)->roles()->sync(2);
     }
 }
