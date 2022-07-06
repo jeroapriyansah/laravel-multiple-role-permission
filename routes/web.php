@@ -26,3 +26,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/example', [\App\Http\Controllers\ExampleController::class, 'index']);
+});
