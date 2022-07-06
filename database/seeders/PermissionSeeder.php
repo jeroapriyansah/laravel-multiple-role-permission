@@ -14,5 +14,17 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
+        $permissions = [
+            [
+                'id'    => 1,
+                'title' => 'admin_access',
+            ],
+            [
+                'id'    => 2,
+                'title' => 'user_access',
+            ],
+        ];
+
+        \App\Models\Permission::insert($permissions);
     }
 }
